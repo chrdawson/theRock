@@ -12,9 +12,20 @@
 
 // invite to Play Again
 
-const playerChoice1 = prompt('Write your choice: rock, paper, scissors.');
+function gameRound() {
+	let playerChoice1 = prompt('Write your choice: rock, paper, scissors.');
+	let playerChoice2 = playerChoice1.toLowerCase();
+	return(playerChoice2);
+};
+
+let playerChoice3 = gameRound();
+
+
+
 const computerChoice = Math.random();
-console.log(playerChoice1);
+console.log(computerChoice);
+
+
 
 function computerAnswer() {
 if (computerChoice <= 0.333333333333333333333333333){
@@ -28,23 +39,10 @@ if (computerChoice <= 0.333333333333333333333333333){
 	return(computerChoice2);
 }
 };
+
 computerAnswer(computerChoice);
 
 let computerChoice3 = computerAnswer();
-
-
-
-
-
-function lowerCaseAnswer() {
-	let playerChoice2 = playerChoice1.toLowerCase();
-	return(playerChoice2);
-};
-
-
-lowerCaseAnswer(playerChoice1);
-let playerChoice3 = lowerCaseAnswer();
-
 
 
 
@@ -66,26 +64,7 @@ function numericalPlayerAnswer() {
 };
 
 
-numericalPlayerAnswer(playerChoice1);
+numericalPlayerAnswer(playerChoice3);
 
 let playerChoice6 = numericalPlayerAnswer();
 console.log(playerChoice6);
-
-
-
-
-
-function winner() {
-if (playerChoice3 === computerChoice3) {
-	alert("The computer also chose " + computerChoice3 + ". It is a tie!");
-} else if (playerChoice3 == "scissors" & computerChoice3 == "rock") {
-  alert("The computer chose " + computerChoice3 + ". You lost. Sorry.");
-} else if (playerChoice6 > computerChoice) {
-	alert("The computer chose " + computerChoice3 + ". You won. Congratulations!");
-} else if (playerChoice6 < computerChoice) {
-	alert("The computer chose " + computerChoice3 + ". You lost. Sorry.");
-} else if (playerChoice1 === computerChoice3) {
-	alert("The also computer chose " + computerChoice3 + ". It is a tie!");
-}
-};
-winner(playerChoice6);
